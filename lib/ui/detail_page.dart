@@ -12,6 +12,29 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final game = widget.game;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(game.gameName),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              game.gameImg[0],
+              errorBuilder: (context, error, stackTrace) =>
+                  const Icon(Icons.broken_image, size: 60),
+            ),
+            SizedBox(height: 16),
+            Text("Publisher: ${game.gamePublisher}"),
+            Text("Release: ${game.gamePublishDate}"),
+            Text("Deskripsi: ${game.gameDesc}"),
+            Text("💓: ${game.totalLike}"),
+          ],
+        ),
+      ),
+    );
   }
 }

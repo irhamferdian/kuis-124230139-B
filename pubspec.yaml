@@ -18,4 +18,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
+    - assets/images/genshin_impact.png
+    - assets/images/valorant.png
+    - assets/images/witcher_3.png
+    - assets/images/gta_v.png
+    - assets/images/rdr2.png
+    - assets/images/minecraft.png    
